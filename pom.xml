@@ -18,6 +18,11 @@
     <jmockit.version>1.48</jmockit.version>
     <sonar.coverage.jacoco.xmlReportPaths>${build.output.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
+  
+  <scm>
+    <connection>scm:git:https://github.com/JavaJimFl/movie-filter.git</connection>
+    <developerConnection>scm:git:https://github.com/JavaJimFl/movie-filter.git</developerConnection>
+  </scm>
 
   <dependencyManagement>
     <dependencies>

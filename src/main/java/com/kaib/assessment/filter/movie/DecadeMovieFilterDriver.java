@@ -217,7 +217,7 @@ public final class DecadeMovieFilterDriver {
   private static void writeFilteredResults(final Set<Movie> filteredMovies, final Path destFilePath)
       throws IOException {
 
-    final String json = GSON.toJson(filteredMovies);
+    final String json = GSON.toJson(filteredMovies).replace("\n", "\r\n");
     Files.writeString(destFilePath, json, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
   }
 
