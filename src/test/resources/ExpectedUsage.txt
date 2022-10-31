@@ -1,0 +1,5 @@
+usage: DecadeMovieFilterDriver
+ -d,--decade <arg>       The decade of interest in the format yyyy
+ -i,--input-file <arg>   The path to the file containing all movies
+                         supported by the application
+ -o,--output-dir <arg>   The path to the filtered movies output directory
