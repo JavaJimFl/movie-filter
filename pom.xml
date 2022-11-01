@@ -7,6 +7,11 @@
   <name>Movie Filter</name>
   <description>Filters JSON structure containing movies based on the decade they were released</description>
 
+  <scm>
+    <connection>scm:git:https://github.com/JavaJimFl/movie-filter.git</connection>
+    <developerConnection>scm:git:https://github.com/JavaJimFl/movie-filter.git</developerConnection>
+  </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.version>5.9.1</junit.version>
@@ -16,13 +21,10 @@
     <surefire.version>3.0.0-M3</surefire.version>
     <pitest.version>1.9.5</pitest.version>
     <jmockit.version>1.48</jmockit.version>
-    <sonar.coverage.jacoco.xmlReportPaths>${build.output.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+    <sonar.coverage.jacoco.xmlReportPaths>
+      ${build.output.directory}/site/jacoco/jacoco.xml
+    </sonar.coverage.jacoco.xmlReportPaths>
   </properties>
-  
-  <scm>
-    <connection>scm:git:https://github.com/JavaJimFl/movie-filter.git</connection>
-    <developerConnection>scm:git:https://github.com/JavaJimFl/movie-filter.git</developerConnection>
-  </scm>
 
   <dependencyManagement>
     <dependencies>
@@ -109,7 +111,7 @@
     <dependency>
       <groupId>io.cucumber</groupId>
       <artifactId>cucumber-java</artifactId>
-	  <scope>test</scope>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.cucumber</groupId>
@@ -122,7 +124,7 @@
       <version>1.4.8</version>
       <scope>test</scope>
     </dependency>
-	<dependency>
+    <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.11.0</version>
@@ -154,7 +156,8 @@
         <configuration>
           <argLine>
             ${surefireArgLine}
-           -Xmx1024m -javaagent:"${settings.localRepository}"/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar
+            -Xmx1024m
+            -javaagent:"${settings.localRepository}"/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar
           </argLine>
           <configurationParameters>
             cucumber.junit-platform.naming-strategy=long
@@ -220,7 +223,9 @@
           </mutators>
           <verbose>false</verbose>
           <jvmArgs>
-            <jvmArg>-javaagent:"${settings.localRepository}"/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar</jvmArg>
+            <jvmArg>
+              -javaagent:"${settings.localRepository}"/org/jmockit/jmockit/${jmockit.version}/jmockit-${jmockit.version}.jar
+            </jvmArg>
           </jvmArgs>
           <outputFormats>
             <outputFormat>XML</outputFormat>
