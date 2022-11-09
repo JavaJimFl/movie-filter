@@ -25,7 +25,7 @@ The adapter in this case is a straightforward driver class that:
 Defensive validation is performed in all application layers.
 
 ## Testing
-I wrote JUnit tests verify application behavior.  Testing the command line argument
+I wrote JUnit tests to verify application behavior.  Testing the command line argument
 validation was the most difficult part because trapping the `System.exit()` call
 required a custom security manager to prevent the test run from stopping with an
 error.  I used [JMockit](https://jmockit.github.io/) as the mocking framework.
