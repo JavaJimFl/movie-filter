@@ -276,4 +276,5 @@
       </plugin>
     </plugins>
   </reporting>
+  <!-- Force re-index -->
 </project>
